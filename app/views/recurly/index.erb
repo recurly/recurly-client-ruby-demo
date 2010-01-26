@@ -1,0 +1,47 @@
+<h1>Recurly API</h1>
+<% if @result_object.class.to_s == 'Array' %>
+  <h2>Success: <%= params[:action] %> => <%= @result_object[0].class %></h2>
+  <% @result_object.each do |result_item| %>
+    <%= @result_object[0].class %>
+    <ul>
+      <% result_item.attributes.each do |k,v| %>
+        <li><%= k %>:  <%= v %></li>
+      <% end %>
+    </ul>
+    <br />
+  <% end %>
+<% else %>
+  <% if @result_object %>
+    <% if @result_object.errors.count == 0 %>
+      <h2>Success: <%= params[:action] %> => <%= @result_object.class %></h2>
+      <ul>
+        <% @result_object.attributes.each do |k,v| %>
+          <li><%= k %>:  <%= v %></li>
+        <% end %>
+      </ul>
+    <% else %>
+      <h2>Errors creating <%= @result_object.class %>:</h2>
+      <ul>
+        <% @result_object.errors.each_full do |e| %>
+          <li><%= e %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  <% end %>
+<% end %>
+
+<hr />
+<%= button_to "Create Account", :action => 'create_account' %>
+<%= button_to "Fetch Account", :action => 'fetch_account' %>
+<%= button_to "Update Account", :action => 'update_account' %>
+<%= button_to "Close Account", :action => 'close_account' %>
+<%= button_to "Update Billing Info", :action => 'update_billing_info' %>
+<%= button_to "Charge Account", :action => 'charge_account' %>
+<%= button_to "List Charges", :action => 'list_charges' %>
+<%= button_to "Credit Account", :action => 'credit_account' %>
+<%= button_to "List Credits", :action => 'list_credits' %>
+<%= button_to "List Plans", :action => 'list_plans' %>
+<%= button_to "Create Subscription", :action => 'create_subscription' %>
+<%= button_to "Update Subscription", :action => 'update_subscription' %>
+<%= button_to "Cancel Subscription", :action => 'cancel_subscription' %>
+<%= button_to "Refund Subscription", :action => 'refund_subscription' %>
