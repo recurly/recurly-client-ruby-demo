@@ -1,7 +1,7 @@
-Recurly Ruby Client App
+Recurly Ruby Client App Demo
 ==================
 
-The Recurly Ruby Client App is an open source rails application which interacts with Recurly's [subscription management api](http://support.recurly.com/faqs/api).
+[Recurly](http://recurly.com) makes subscription billing easy.  This project is a sample application that demonstrates how to use Recurly's [Ruby Client Library](http://github.com/recurly/recurly-client-ruby).
 
 Usage
 -----
@@ -10,8 +10,8 @@ Please see the [documentation](http://support.recurly.com/faqs/api/ruby-client) 
 [support forums](http://support.recurly.com/discussions) for more information.
 
 
-Installation
-------------
+Ruby Client Library Installation
+--------------------------------
 
 This App depends on the Recurly Client Library which can be installed as a gem or a plugin. Your choice.
 
