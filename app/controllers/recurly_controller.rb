@@ -1,8 +1,6 @@
 require 'recurly' 
 
-class RecurlyController < ApplicationController
-  
-  TEST_PLAN_CODE = 'test'  
+class RecurlyController < ApplicationController 
   
   def index
   end

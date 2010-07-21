@@ -21,7 +21,7 @@ This App depends on the Recurly Client Library which can be installed as a gem o
     
 **Plugin Installation:**
 
-    script/plugin install git@github.com:recurly/recurly-client-ruby.git
+    script/plugin install git://github.com/recurly/recurly-client-ruby.git
 
 
 Authentication
@@ -36,6 +36,10 @@ Create a file in your Rails app at __/config/initializers/recurly_config.rb__ wi
       c.password = 'super_secret_password'
     end
 
+Subscription Plan
+-----------------
+
+The demo requires you to create a plan with a plan\_code of 'test' in your Recurly Site's configuration or edit the TEST\_PLAN\_CODE in config/environment.rb
 
 API Documentation
 -----------------
