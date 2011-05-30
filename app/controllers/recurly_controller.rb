@@ -1,5 +1,3 @@
-require 'recurly' 
-
 class RecurlyController < ApplicationController 
   
   def index
