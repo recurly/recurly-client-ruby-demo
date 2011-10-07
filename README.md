@@ -13,28 +13,18 @@ Please see the [documentation](http://support.recurly.com/faqs/api/ruby-client) 
 Ruby Client Library Installation
 --------------------------------
 
-This App depends on the Recurly Client Library which can be installed as a gem or a plugin. Your choice.
+This App depends on the Recurly Client Library which can be installed as a gem.
 
 **Gem Installation:**
 
     gem install recurly --source=http://gemcutter.org
-    
-**Plugin Installation:**
-
-    script/plugin install git://github.com/recurly/recurly-client-ruby.git
 
 
 Authentication
 --------------
 
-The Recurly Ruby Client App requires a username and password to connect.  We recommend creating a user just for your API.  Please see the [Authentication](http://support.recurly.com/faqs/api/authentication) documentation for more information.
-
-Create a file in your Rails app at __/config/initializers/recurly_config.rb__ with contents like:
-
-    Recurly.configure do |c|
-      c.username = 'api@yourcompany.com'
-      c.password = 'super_secret_password'
-    end
+The Recurly Ruby Client App requires an API key to connect. Please see the [Recurly Ruby client](https://github.com/recurly/recurly-client-ruby) documentation for more all the options
+for specifying your API credentials.
 
 Subscription Plan
 -----------------
